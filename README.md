@@ -48,11 +48,12 @@ npm install @typedly/pattern --save-peer
 ```typescript
 import {
   // Interface.
-  Pattern,
   PatternConfiguration,
   PatternOptions,
   PatternSetting,
   PatternSettings,
+  // Type.
+  PatternFromFlags
 } from '@typedly/pattern';
 ```
 
@@ -65,6 +66,13 @@ import {
 ```typescript
 import { PatternConfiguration } from '@typedly/pattern';
 
+const example1: PatternConfiguration = {
+  'lowercase': true,
+  'regexp': /[a-zA-Z0-9\W_]+/g,
+  'uppercase': true,
+  'special': true,
+  'numeric': true,
+};
 ```
 
 #### `PatternOptions`
@@ -74,6 +82,12 @@ import { PatternConfiguration } from '@typedly/pattern';
 ```typescript
 import { PatternOptions } from '@typedly/pattern';
 
+const example1: PatternOptions = {
+  'lowercase': true,
+  'uppercase': true,
+  'special': true,
+  'numeric': true,
+};
 ```
 
 #### `PatternSetting`
@@ -83,6 +97,15 @@ import { PatternOptions } from '@typedly/pattern';
 ```typescript
 import { PatternSetting } from '@typedly/pattern';
 
+const example1: PatternSetting = {
+  pattern: {
+  'lowercase': true,
+  'regexp': /[a-zA-Z0-9\W_]+/g,
+  'uppercase': true,
+  'special': true,
+  'numeric': true,
+  }
+};
 ```
 
 #### `PatternSettings`
@@ -92,6 +115,13 @@ import { PatternSetting } from '@typedly/pattern';
 ```typescript
 import { PatternSettings } from '@typedly/pattern';
 
+const example1: PatternSettings = {
+  'lowercase': true,
+  'regexp': /[a-zA-Z0-9\W_]+/g,
+  'uppercase': true,
+  'special': true,
+  'numeric': true,
+};
 ```
 
 ### Type
