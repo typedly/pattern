@@ -1,0 +1,1 @@
+export type { PatternFromFlags } from './pattern-from-flags.type';
