@@ -14,7 +14,7 @@
 [![GitHub issues][typedly-badge-issues]][typedly-issues]
 [![GitHub license][typedly-badge-license]][typedly-license]
 
-**Version:** v0.1.1
+**Version:** v1.0.0
 
 A **TypeScript** type definitions package for pattern.
 
