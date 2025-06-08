@@ -66,12 +66,18 @@ import {
 ```typescript
 import { PatternConfiguration } from '@typedly/pattern';
 
-const example1: PatternConfiguration = {
-  'lowercase': true,
-  'regexp': /[a-zA-Z0-9\W_]+/g,
-  'uppercase': true,
-  'special': true,
-  'numeric': true,
+const example1: PatternConfiguration<
+  RegExp, // Value
+  true, // Numeric
+  true, // Lowercase
+  true, // Uppercase
+  true // Special
+> = {
+  lowercase: true,
+  regexp: /[a-zA-Z0-9\W_]+/g,
+  uppercase: true,
+  special: true,
+  numeric: true,
 };
 ```
 
@@ -82,11 +88,17 @@ const example1: PatternConfiguration = {
 ```typescript
 import { PatternOptions } from '@typedly/pattern';
 
-const example1: PatternOptions = {
-  'lowercase': true,
-  'uppercase': true,
-  'special': true,
-  'numeric': true,
+const example1: PatternOptions<
+  RegExp, // Value
+  true, // Numeric
+  true, // Lowercase
+  true, // Uppercase
+  false // Special
+> = {
+  lowercase: true,
+  uppercase: true,
+  special: false,
+  numeric: true,
 };
 ```
 
@@ -97,13 +109,19 @@ const example1: PatternOptions = {
 ```typescript
 import { PatternSetting } from '@typedly/pattern';
 
-const example1: PatternSetting = {
+const example1: PatternSetting<
+  RegExp, // Value
+  true, // Numeric
+  true, // Lowercase
+  true, // Uppercase
+  true // Special
+> = {
   pattern: {
-  'lowercase': true,
-  'regexp': /[a-zA-Z0-9\W_]+/g,
-  'uppercase': true,
-  'special': true,
-  'numeric': true,
+  lowercase: true,
+  regexp: /[a-zA-Z0-9\W_]+/g,
+  uppercase: true,
+  special: true,
+  numeric: true,
   }
 };
 ```
@@ -115,12 +133,18 @@ const example1: PatternSetting = {
 ```typescript
 import { PatternSettings } from '@typedly/pattern';
 
-const example1: PatternSettings = {
-  'lowercase': true,
-  'regexp': /[a-zA-Z0-9\W_]+/g,
-  'uppercase': true,
-  'special': true,
-  'numeric': true,
+const example1: PatternSettings<
+  RegExp, // Value
+  true, // Numeric
+  true, // Lowercase
+  true, // Uppercase
+  true // Special
+> = {
+  lowercase: true,
+  regexp: /[a-zA-Z0-9\W_]+/g,
+  uppercase: true,
+  special: true,
+  numeric: true,
 };
 ```
 
@@ -133,6 +157,12 @@ const example1: PatternSettings = {
 ```typescript
 import { PatternFromFlags } from '@typedly/pattern';
 
+const example1: PatternFromFlags<
+  true, // Lowercase
+  true, // Uppercase
+  true, // Digit
+  false // Special
+> = "[a-zA-Z0-9]+";
 ```
 
 ## Contributing
