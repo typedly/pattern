@@ -45,8 +45,3 @@ export interface PatternSettings<
    */
   special: Special;
 };
-
-  // alphabetic?: boolean;
-  // alphanumeric?: boolean;
-  // ascii?: boolean;
-  // unicode?: boolean;
